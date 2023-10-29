@@ -4,18 +4,18 @@ class TreeNode:
         self.children = [] # list for the children
 
     # simple function to add a child given the data
-    def add_child(self, data):
+    def add_childData(self, data):
         child_node = TreeNode(data) # create child node with the data given
         self.children.append(child_node) #add child by appending it
 
 
     # simple function to add a child given the node
-    def add_childNode(self, child_node):
+    def add_child(self, child_node):
         self.children.append(child_node) # add child by appending it
 
     # simple function to add a parent to an orphan node
     def add_Parent(self, parent_node):
-        parent_node.add_childNode(self) # add parent to the node by appending it to the intended parent children
+        parent_node.add_child(self) # add parent to the node by appending it to the intended parent children
 
     # simple function to get the heigh of a node
     def height(self):
